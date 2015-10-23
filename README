@@ -1,0 +1,87 @@
+This is homework 9 for Interactive Computer Graphics, by Shangqi Wu.
+
+This program is developed with the virtual machine provided by this course.
+
+This program has 2 parts, part 1 for 2D texture on bezier patch and part 2 for 3D procedural texture. To compile part 1, please use the makefile and type "make” or “make part1” in command line, and its executable file will be named “part1”. To compile part 2, please type “make part2”, and executable file named “part2” will be generated. Command "make clean" can remove the all executable files.
+
+To run part 1, please type “./part1” in command line, and also make sure the file named "patchPoints.txt" is under current path. This program automatically reads the file to generates control points. 
+
+For part 2, please type “./part2” in command line. The program firstly asks you to choose an smf input file. For your convenience, I have packed a few smf files inside the tar file to choose. 
+
+----------------------------------------------------------------------------
+Default view: PART 1
+Once input file is loaded, it will generate a window with black background with object in the center. It performs perspective projection, while camera starts from the front of the object (0, 3, 3), rotating counter-clockwise with radius of 1. There are 2 light sources, the blue one is moving with camera, while the yellow one can rotate around the object, by pressing 'y' or 'r' at height of 1. The texture is blue and white strips, applied to the patch with phong shading.
+
+----------------------------------------------------------------------------
+Default view: PART 2
+Once input file is successfully loaded, it will generate a window with black background with object in the center. It performs perspective projection, while camera starts from the front of the object (0, 0, 1), rotating counter-clockwise with radius of 1. There are 2 light sources, the white one is moving with camera, while the yellow one can rotate around the object, by pressing 'y' or 'r' at height of 1. Material is white marble with black strips.
+
+----------------------------------------------------------------------------
+Menu instruction: PART 1
+There are 4 submenus, one is for start/stop camera and light rotation, the second one is for changing projection mode between perspective and parallel, the third is for selecting material, and the last one is for light color. You can make desired change by clicking menu options. 
+
+----------------------------------------------------------------------------
+Menu instruction: PART 2
+There are 4 submenus, one is for start/stop camera and light rotation, the second one is for changing projection mode between perspective and parallel, the third one is for selecting material, and the last one is for light color. You can make desired change by clicking menu options. You can change the light to white through the menu so that it is more convenient to check difference among all materials.
+
+----------------------------------------------------------------------------
+Keyboard instruction: PART 1
+
+Camera control:
+'w': Increase height of camera.
+'s': Decrease height of camera.
+'a': Increase orbit radius of camera, which makes the object looks smaller.
+'d': Decrease orbit radius of camera, which makes the object looks larger.
+'e': Increase speed of camera rotation when rotating counter-clockwise, while decreasing speed when rotating clockwise.
+'q': Decrease speed of camera rotation when rotating counter-clockwise, while decreasing speed when rotating clockwise.
+'x': Rotate object counter-clockwise for one step. Useful for stop camera and adjust view.
+'z': Rotate object clockwise for one step.
+
+Light source 2 control:
+'y': Rotate light source counter-clockwise.
+'r': Rotate light source clockwise.
+'t': Increase height of rotating light source.
+'g': Decrease height of rotating light source.
+'f': Increase orbit radius of rotating light source.
+'h': Decrease orbit radius of rotating light source.
+'v': Double delta of rotating step.
+'c': Half delta of rotating step.
+
+Control point pick up:
+'0' - '9': Pick up the 1st to 10th control points in the txt file.
+'!' - '^': i.e., from "shift"+'1' to "shift"+'6', to pick up 11th to 16th control points.
+'&': i.e., "shift"+'7', to drop current picked control point.
+
+Control point modification:
+'i': Increase y coordinate by 0.1, or moving control point upwards.
+'k': Decrease y coordinate by 0.1, or moving control point downwards.
+'l': Increase x coordinate by 0.1, or moving control point to right.
+'j': Decrease x coordinate by 0.1, or moving control point to left.
+'o': Increase z coordinate by 0.1, or pulling control point out.
+'u': Decrease z coordinate by 0.1, or pushing control point in.
+
+Sample resolution:
+'m': Increase resolution by 1.
+'n': Decrease resolution by 1, until resolution becomes 2.
+
+----------------------------------------------------------------------------
+Keyboard instruction: PART 2
+Camera control:
+'w': Increase height of camera.
+'s': Decrease height of camera.
+'a': Increase orbit radius of camera, which makes the object looks smaller.
+'d': Decrease orbit radius of camera, which makes the object looks larger.
+'e': Increase speed of camera rotation when rotating counter-clockwise, while decreasing speed when rotating clockwise.
+'q': Decrease speed of camera rotation when rotating counter-clockwise, while decreasing speed when rotating clockwise.
+Light source 2 control:
+'y': Rotate light source counter-clockwise.
+'r': Rotate light source clockwise.
+'t': Increase height of rotating light source.
+'g': Decrease height of rotating light source.
+'f': Increase orbit radius of rotating light source.
+'h': Decrease orbit radius of rotating light source.
+'v': Double delta of rotating step.
+'c': Half delta of rotating step.
+'u': Double delta of height changing step.
+'j': Half delta of height changing step.
+
